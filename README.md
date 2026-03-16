@@ -1,4 +1,4 @@
-<p align="justify"><h1>Entendendo o Artigo CRoC: Detecção de Anomalias em Grafos</h1></p>
+<p align="justify"><h1>Entendendo o Artigo CRoC: <a href="https://arxiv.org/pdf/2508.12278">Detecção de Anomalias em Grafos</a></h1></p>
 
 <p align="justify">O artigo <b>CRoC (Context Refactoring Contrast)</b> propõe uma solução inovadora para um desafio clássico na ciência de dados: como identificar o "estranho no ninho" dentro de uma rede complexa (como redes sociais ou sistemas bancários) quando temos pouquíssimos exemplos do que é uma anomalia. O foco aqui é a <b>Detecção de Anomalias em Grafos (GAD)</b> com supervisão limitada.</p>
 
