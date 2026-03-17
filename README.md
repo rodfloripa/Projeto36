@@ -27,7 +27,6 @@
 <p align="justify">Em resumo, o CRoC não tenta apenas decorar padrões; ele aprende a <b>lógica de vizinhança</b>. Se um nó quebra essa lógica, ele é marcado como uma anomalia, mesmo que o modelo nunca tenha visto um exemplo de fraude antes.</p>
 
 Vamos quebrar o código do CRoC em blocos funcionais e explicar o que cada linha "faz na prática".
-
 Aqui estão as partes vitais do motor de detecção de anomalias:
 
 <p align="justify"><h3>1. Injeção de Anomalias (O "Crime")</h3></p>
