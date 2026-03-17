@@ -81,7 +81,7 @@ x_ref = data.x * mask
 
 <p align="justify"><h3>4. Perda Contrastiva InfoNCE (O "Ajuste")</h3></p>
 
-<p align="justify">Esta é a lógica de recompensa. Se o nó original e a sua versão refatorada estiverem próximos, a perda é baixa. Se estiverem longe, o modelo é penalizado.</p>
+<p align="justify">Esta é a lógica de recompensa. Se o nó original e a sua versão refatorada estiverem próximos, a perda é baixa. Se estiverem longe, o modelo é penalizado.Z1 e Z2 sãoos 'embeddings' do nó.</p>
 
 ```python
 
