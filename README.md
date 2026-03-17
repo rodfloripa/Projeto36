@@ -104,7 +104,7 @@ loss = -torch.log(pos_sim / all_sim).mean()
 
 ```python
 
-Calculamos a distância entre o nó real e o nó "vazio".Anomalias terão uma distância (norma) muito maior
+#Calculamos a distância entre o nó real e o nó "vazio".Anomalias terão uma distância (norma) muito maior
 
 scores = torch.norm(z_original - z_contexto_puro, dim=1)
 ```
