@@ -66,7 +66,7 @@ self.projector = nn.Linear(hid_dim, hid_dim)
 
 <p align="justify"><h3>3. Refatoração de Contexto (A "Dúvida")</h3></p>
 
-<p align="justify">No treinamento, criamos uma versão "mutilada" dos dados (<code>x_ref</code>). O objetivo é ver se o modelo consegue manter o nó no mesmo lugar mesmo se faltarem pedaços da informação.</p>
+<p align="justify">No treinamento, criamos uma versão "mutilada" dos dados (<code>x_ref</code>). O objetivo é ver se o modelo consegue manter o nó no mesmo lugar mesmo se faltarem pedaços da informação.​O data.x é um tensor (uma matriz) com o formato [Número de Nós, Número de Atributos].</p>
 
 ```python
 
