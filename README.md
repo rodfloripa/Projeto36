@@ -40,6 +40,21 @@ error = torch.abs(predictions - y_test).numpy()
 # 300 pontos é o período de calibração com sinal saudável
 threshold = np.mean(error[:300]) + 4 * np.std(error[:300])
 ```
+
+<p align="justify"><h3>4. Adaptabilidade: Limiar Dinâmico (Rolling Window)</h3></p>
+
+<p align="justify">Em um cenário real, como um trem percorrendo diferentes terrenos  a vibração natural muda drasticamente ao passar por uma ponte, um túnel ou uma curva fechada. Um valor fixo de calibração (como os primeiros 300 pontos) causaria alarmes falsos. Para resolver isso, implementamos uma <b>Janela Móvel (Rolling Window)</b>, onde o "normal" é recalculado constantemente com base no histórico recente:</p>
+
+```Python
+
+# O Threshold se adapta ao terreno (Ex: Ponte vs. Reta)
+# Calcula a média e desvio padrão dos últimos 500 pontos
+window = 500
+threshold_dinamico = erro.rolling(window=window).mean() + 4 * erro.rolling(window=window).std()
+```
+
+<p align="justify">Essa técnica de <b>Estatística Adaptativa</b> permite que o Transformer ignore mudanças graduais no ambiente e foque apenas em picos de energia que fogem do padrão estatístico imediato da via. No nosso código simplificado, o valor de 300 serviu como o período de calibração inicial, mas em produção, a janela móvel é o que garante a robustez do sistema.</p>
+
 <p align="justify"><h3>4. Conclusão e Análise das Figuras</h3></p>
 
 <p align="justify">Ao observar os gráficos gerados, a eficácia do método torna-se evidente:</p>
