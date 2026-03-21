@@ -43,7 +43,7 @@ threshold = np.mean(error[:300]) + 4 * np.std(error[:300])
 
 <p align="justify"><h3>4. Adaptabilidade: Limiar Dinâmico (Rolling Window)</h3></p>
 
-<p align="justify">Em um cenário real, como um trem percorrendo diferentes terrenos  a vibração natural muda drasticamente ao passar por uma ponte, um túnel ou uma curva fechada. Um valor fixo de calibração (como os primeiros 300 pontos) causaria alarmes falsos. Para resolver isso, implementamos uma <b>Janela Móvel (Rolling Window)</b>, onde o "normal" é recalculado constantemente com base no histórico recente:</p>
+<p align="justify">Em um cenário real, como um trem percorrendo diferentes terrenos  a vibração natural muda drasticamente ao passar por uma ponte, um túnel ou uma curva fechada. Um valor fixo de calibração (como os primeiros 300 pontos) causaria alarmes falsos. Para resolver isso, implementaríamos uma <b>Janela Móvel (Rolling Window)</b>, onde o "normal" é recalculado constantemente com base no histórico recente:</p>
 
 ```Python
 
