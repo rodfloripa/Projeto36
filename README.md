@@ -37,6 +37,7 @@ self.output_fc = nn.Linear(64, 1)
 error = torch.abs(predictions - y_test).numpy()
 
 # Definimos um Limiar (Threshold) estatístico baseado no sinal saudável
+# 300 pontos é o período de calibração com sinal saudável
 threshold = np.mean(error[:300]) + 4 * np.std(error[:300])
 ```
 <p align="justify"><h3>4. Conclusão e Análise das Figuras</h3></p>
